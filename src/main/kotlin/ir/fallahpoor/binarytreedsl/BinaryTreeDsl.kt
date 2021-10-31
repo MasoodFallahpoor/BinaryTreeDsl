@@ -24,7 +24,7 @@ class BinaryTreeBuilder<T>(root: BinaryTreeNode<T>) {
 
 }
 
-fun <T> binaryTree(rootValue: T, content: BinaryTreeBuilder<T>.() -> Unit): BinaryTreeNode<T> {
+fun <T> binaryTree(rootValue: T, content: BinaryTreeBuilder<T>.() -> Unit = {}): BinaryTreeNode<T> {
     val root = BinaryTreeNode(rootValue)
     val binaryTreeBuilder = BinaryTreeBuilder(root)
     binaryTreeBuilder.content()
